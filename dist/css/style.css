@@ -4,10 +4,155 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Oswald', sans-serif;
+/*body {
+  font-family: 'Lato', sans-serif;
   font-size: 1.3rem;
   background: #f9f9f9;
+  max-width: 1200px;
+  margin: auto;
+}*/
+
+body{
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  padding: 20px 20px 40px 20px;
+  color: #333;
+  background:#fff;
+  line-height: 1.4;
+  font-size: 14px;
+}
+table { width:100%;}
+td { border:1px solid #ccc;}
+ul{	margin: 0;padding: 0 0 0 20px;}
+p{margin: 0 0 10px 0;}
+.text-right { text-align:right;}
+.text-center { text-align:center;}
+h4{margin: 0 0 10px;}
+
+/* Remove focus ring as all screen readers tested on, add their own focus ring */
+:focus{
+  outline: 0;
+}
+
+#contactForm .box {
+  background-color: #222;
+  color: #999;
+}
+#contactForm .box h1,
+#contactForm .box h2,
+#contactForm .box h3 {
+  color: #fff;
+}
+#contactForm .box a {
+  color: #999;
+}
+#contactForm .box a:hover {
+  color: #52b6ec;
+}
+#contactForm .box input[type="text"],
+#contactForm .box input[type="email"],
+#contactForm .box textarea {
+  background-color: #111;
+  border: 0;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+#contactForm .box input[type="text"]:focus,
+#contactForm .box input[type="email"]:focus,
+#contactForm .box textarea:focus {
+  background-color: #000;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+#message {
+  margin-bottom: 15px;
+}
+
+
+/* ---------------------------------
+
+		A C C O R D I A N
+
+--------------------------------- */
+
+.accordion{
+	border-radius: 3px;
+	overflow: hidden;
+	border: 1px solid #b50d10;
+}
+
+.accordion-panel__heading{
+	position: relative;
+	padding: 20px;
+	display: block;
+	text-decoration: none;
+	color: #b50d10;
+	background: #f5f5f5;
+	font-size: 18px;
+	font-weight: 600;
+	transition: all .2s;
+	cursor:pointer;
+}
+.accordion-panel__heading:not(:last-child){
+  border-bottom: 1px solid #b50d10;
+}
+.accordion-panel__heading:before{
+	transition: all .8s ease;
+	content: "";
+	border: 0px #6495ED solid;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+}
+.accordion-panel__heading.active:before{
+	transition: all .8s;
+	border-left: 8px #b50d10 solid;
+}
+.accordion-panel__heading:HOVER{
+	color: #333;
+	background: #f1f1f1;
+	transition: all .2s;
+}
+.accordion-panel__heading.active:HOVER,
+.accordion-panel__heading.active {
+  transition: all .2s;
+  color: #333;
+  background: #fff;
+  border-bottom: 0;
+  padding: 20px 20px 20px 30px;
+}
+.accordion-panel__content{
+  transition: all .8s;
+  position: relative;
+  padding: 0 20px 0 20px;
+  background: #f1f1f1;
+  max-height: 0;
+  overflow: hidden;
+}
+.accordion-panel__content:before{
+  transition: all .8s ease;
+  content: "";
+  border: 0px #6495ED solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+}
+.accordion-panel__content.active:before{
+  transition: all .8s;
+  border-left: 8px #b50d10 solid;
+}
+.accordion-panel__content.active {
+  transition: all .8s;
+  max-height: 500px;
+  background: #fff;
+  padding: 10px 20px 15px 30px;
 }
 
 a {
@@ -15,11 +160,17 @@ a {
   text-decoration: none;  
 }
 
-.container {
-  max-width: 1100px;
+.scroll-container {
+  max-width: auto;
   margin: auto;
   overflow: auto;
   padding: 0 2 rem;
+}
+
+.FAQ-container >h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .main-header {
@@ -60,6 +211,73 @@ img {
     width: 100%;
 }
 
+
+
+/* Unicode character for "plus" sign (+) 
+p.accordion:after {
+  content: '\2795'; 
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}*/
+
+/* Unicode character for "minus" sign (-)
+p.accordion:active:after {
+  content: "\2796"; 
+}*/
+
+.container {
+  width: 100%;
+  max-width: 16
+  
+  00px;
+  margin: 0px auto;
+}
+
+button.accordion {
+  width: 100%;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+  transition: background-color 0.8s linear;
+}
+
+button.accordion:after {
+  content: '\f055';
+  font-family: "fontawesome";
+  font-size: 20px;
+  float: right;
+}
+
+button.accordion.is-open:after {
+  content: '\f056';
+}
+
+button.accordion:hover, button.accordion.is-open {
+  background-color: #ddd;
+}
+
+.accordion-content {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 15px 20px;
+  max-height: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -71,7 +289,7 @@ img {
 }
 
 .card h3 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 card img {
@@ -81,7 +299,6 @@ card img {
 .card div {
   padding: 2rem;
   font-size: 1rem;
-  rem;
 }
 
 .card:nth-child(even) img {
@@ -93,13 +310,104 @@ card img {
   background: #b50d10;
   color: #fff;
   padding: 0.6rem 1.45rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
   cursor: pointer;
 }
 
 .btn:hover {
   opacity: 0.8;
 }
+
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.dotless {
+	list-style: none;
+}
+
+.page-title {
+	text-align: center;
+	margin: 2rem;
+}
+
+.dropdown-container {
+	max-width: 800px;
+	min-width: 300px;
+	margin: 1rem auto;
+	border: 1px solid #ccc;
+	background-color: white;
+	color: #888;
+	overflow: hidden;
+}
+
+.dropdown-container {
+	background-color: white;
+}
+
+.dropdown-container header {
+	cursor: pointer;
+	font-size: 0.6rem;
+	padding: 1rem;
+	background-color: mediumspringgreen;
+	color: white;
+	transition: background-color 350ms ease-in-out;
+}
+
+.dropdown-container.open header {
+	background-color: springgreen;
+}
+
+.dropdown-container h1 {
+	float: left;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+.dropdown-container .expand {
+	float: right;
+	transform: rotate(45deg);
+	font-size: 1.8em;
+	transition: transform 350ms ease-in-out;
+}
+
+.dropdown-container.open .expand{
+	transform: rotate(0);
+}
+
+
+.dropdown-container article {
+	max-height: 0px;
+	overflow: hidden;
+	line-height: 1.6; 
+	transition: max-height 350ms ease-in-out;
+}
+
+/* padding can't be on article element because it won't collapse properly, add wrapper around contents */
+.dropdown-container .article-inner {
+	padding: 1rem;
+}
+
+
+
+
+
+
+/** This class will hide all the body by default **/
+#accordion .acc-body {
+  display: none;
+}
+/** This class will show the body if it has "active" parent class. "active" class will be added to panel div **/
+#accordion .active .acc-body {
+  display: block;
+}
+
 
 footer {
   font-size: 1rem;
