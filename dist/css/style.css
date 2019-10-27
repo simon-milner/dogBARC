@@ -13,13 +13,20 @@
 }*/
 
 body{
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   padding: 20px 20px 40px 20px;
   color: #333;
   background:#fff;
-  line-height: 1.4;
-  font-size: 14px;
 }
+
+h1 { font-family: Lato; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 40px; padding: 0px;} 
+h2 { font-family: Lato; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 28px; padding: 10px 0px;} 
+h3 { font-family: Lato; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 20px; padding: 10px 0px; margin-bottom: 2rem;} 
+h4 { font-family: Lato; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 20px; padding: 10px 0px;} 
+p1 { font-family: Lato; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; padding: 20px 0px;} 
+p2 { font-family: Lato; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding: 10px 0px 10px 0px;} 
+a { font-family: Lato; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+blockquote { font-family: Lato; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Lato; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+
 table { width:100%;}
 td { border:1px solid #ccc;}
 ul{	margin: 0;padding: 0 0 0 20px;}
@@ -34,8 +41,11 @@ h4{margin: 0 0 10px;}
 }
 
 #contactForm .box {
-  background-color: #222;
-  color: #999;
+  border-radius: 3px;
+  overflow: hidden;
+  /*border: 3px solid #b50d10;*/
+  background-color: rgb(51,51,51);
+  color: #fff;
 }
 #contactForm .box h1,
 #contactForm .box h2,
@@ -43,7 +53,8 @@ h4{margin: 0 0 10px;}
   color: #fff;
 }
 #contactForm .box a {
-  color: #999;
+  /* color: #999; */
+  color: white;
 }
 #contactForm .box a:hover {
   color: #52b6ec;
@@ -93,14 +104,14 @@ h4{margin: 0 0 10px;}
 	background: #f5f5f5;
 	font-size: 18px;
 	font-weight: 600;
-	transition: all .2s;
+	transition: all .4s;
 	cursor:pointer;
 }
 .accordion-panel__heading:not(:last-child){
   border-bottom: 1px solid #b50d10;
 }
 .accordion-panel__heading:before{
-	transition: all .8s ease;
+	transition: all .4s ease;
 	content: "";
 	border: 0px #6495ED solid;
 	position: absolute;
@@ -110,24 +121,24 @@ h4{margin: 0 0 10px;}
 	height: 100%;
 }
 .accordion-panel__heading.active:before{
-	transition: all .8s;
+	transition: all .4s;
 	border-left: 8px #b50d10 solid;
 }
 .accordion-panel__heading:HOVER{
 	color: #333;
 	background: #f1f1f1;
-	transition: all .2s;
+	transition: all .4s;
 }
 .accordion-panel__heading.active:HOVER,
 .accordion-panel__heading.active {
-  transition: all .2s;
+  transition: all .4s;
   color: #333;
   background: #fff;
   border-bottom: 0;
   padding: 20px 20px 20px 30px;
 }
 .accordion-panel__content{
-  transition: all .8s;
+  transition: all .4s;
   position: relative;
   padding: 0 20px 0 20px;
   background: #f1f1f1;
@@ -135,7 +146,7 @@ h4{margin: 0 0 10px;}
   overflow: hidden;
 }
 .accordion-panel__content:before{
-  transition: all .8s ease;
+  transition: all .4s ease;
   content: "";
   border: 0px #6495ED solid;
   position: absolute;
@@ -145,11 +156,11 @@ h4{margin: 0 0 10px;}
   height: 100%;
 }
 .accordion-panel__content.active:before{
-  transition: all .8s;
+  transition: all .4s;
   border-left: 8px #b50d10 solid;
 }
 .accordion-panel__content.active {
-  transition: all .8s;
+  transition: all .4s;
   max-height: 500px;
   background: #fff;
   padding: 10px 20px 15px 30px;
@@ -167,11 +178,19 @@ a {
   padding: 0 2 rem;
 }
 
-.FAQ-container >h1 {
+.FAQ-container {
+  margin-bottom: 60px;
+}
+.FAQ-container >h2 {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-top: 30px;
 }
+
+.col-sm-6 .border {
+  padding: 10px 20px;
+}
+
 
 .main-header {
   height: 55vh;
@@ -184,7 +203,6 @@ a {
 }
 
 .main-header h1 {
-  font-size: 4rem;
   margin-bottom: 2rem;
   line-height: 1.2;
 }
@@ -274,7 +292,7 @@ button.accordion:hover, button.accordion.is-open {
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 
@@ -284,12 +302,12 @@ button.accordion:hover, button.accordion.is-open {
   grid-gap: 2rem;
   background: #f1f1f1;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
 }
 
-.card h3 {
-  margin-bottom: 1rem;
+.card h3, p1, p2 {
+  margin-bottom: 2rem;
 }
 
 card img {

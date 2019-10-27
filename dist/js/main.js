@@ -114,14 +114,14 @@ myAPP.init = function () {
     }); //  store the panel selectors in Accordian Class - Accordion( { heading: <String>, content: <String>} )
 
     // Select second panel
-    this.accordionContainer.panels[1].select(); // or myAPP.accordionContainer.panels[0].select();
+    //this.accordionContainer.panels[1].select(); // or myAPP.accordionContainer.panels[0].select();
 };
 
 window.onload = function () {
     myAPP.init();
 };
 
-
+/*
 var accordions = document.getElementsByClassName("accordion");
 var last;
 for (var i = 0; i < accordions.length; i++) {
@@ -137,7 +137,7 @@ for (var i = 0; i < accordions.length; i++) {
 	  last.nextElementSibling.style.maxHeight = null;
 	}
   }
-}
+}*/
 
 
 /* AJAX Function */
