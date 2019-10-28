@@ -18,12 +18,11 @@ body{
   background:#fff;
 }
 
-h1 { font-family: Lato; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 40px; padding: 0px;} 
-h2 { font-family: Lato; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 28px; padding: 10px 0px;} 
-h3 { font-family: Lato; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 20px; padding: 10px 0px; margin-bottom: 2rem;} 
-h4 { font-family: Lato; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 20px; padding: 10px 0px;} 
-p1 { font-family: Lato; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; padding: 20px 0px;} 
-p2 { font-family: Lato; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding: 10px 0px 10px 0px;} 
+h1 { font-family: Lato; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 40px; padding: 0px; margin-top: 20px;} 
+h2 { font-family: Lato; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 32px; padding: 10px 0px;} 
+h3 { font-family: Lato; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 22px; padding: 10px 0px; margin-bottom: 2rem;} 
+h4 { font-family: Lato; font-size: 28px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding: 30px 10px 0px 20px;} 
+p { font-family: Lato; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 26px; padding: 10px 10px 10px 20px; margin-bottom: 10px;} 
 a { font-family: Lato; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
 blockquote { font-family: Lato; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Lato; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 
@@ -38,6 +37,28 @@ h4{margin: 0 0 10px;}
 /* Remove focus ring as all screen readers tested on, add their own focus ring */
 :focus{
   outline: 0;
+}
+
+.txt-vertical-center {
+  position: relative;
+  min-height: 220px;
+}
+
+.txt-vertical-center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.col-sm-6 {
+  padding: 0 20px;
+}
+
+.col-sm-12 {
+  padding: 0 20px;
 }
 
 #contactForm .box {
@@ -163,7 +184,14 @@ h4{margin: 0 0 10px;}
   transition: all .4s;
   max-height: 500px;
   background: #fff;
-  padding: 10px 20px 15px 30px;
+  padding: 0px 20px 30px 30px;
+}
+
+
+.accordion-panel__content p {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 a {
@@ -187,8 +215,8 @@ a {
   margin-top: 30px;
 }
 
-.col-sm-6 .border {
-  padding: 10px 20px;
+.border p {
+  font-weight: 300;
 }
 
 
@@ -199,7 +227,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .main-header h1 {
@@ -221,7 +249,7 @@ a {
   font-size: 1.5rem;
 }
 
-h3 span {
+p span {
   color: #b50d10;
 }
 
@@ -247,9 +275,7 @@ p.accordion:active:after {
 
 .container {
   width: 100%;
-  max-width: 16
-  
-  00px;
+  max-width: 1200px;
   margin: 0px auto;
 }
 
@@ -299,24 +325,23 @@ button.accordion:hover, button.accordion.is-open {
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   background: #f1f1f1;
-  margin-top: 2rem;
+  margin-top: 0rem;
   margin-bottom: 3rem;
-
 }
 
+/*
 .card h3, p1, p2 {
-  margin-bottom: 2rem;
-}
+  margin-bottom: 1rem;
+}*/
 
 card img {
   height: 400px;
 }
 
 .card div {
-  padding: 2rem;
-  font-size: 1rem;
+  padding: 1rem;
 }
 
 .card:nth-child(even) img {
@@ -327,7 +352,7 @@ card img {
   display: inline-block;
   background: #b50d10;
   color: #fff;
-  padding: 0.6rem 1.45rem;
+  padding: 0.4rem 1rem;
   margin-top: 0rem;
   cursor: pointer;
 }
@@ -436,9 +461,28 @@ footer {
 }
 
 @media(max-width: 700px) {
+  body {
+    padding: 0;
+  }
+
+  h1 { font-size: 50px;} 
+  h2 { font-size: 25px;} 
+  h3 { font-size: 18px;} 
   .card {
     display: block;
   }
+  .main-header {
+    height: 40vh;
+  }
+
+  .FAQ-container {
+    padding: 5px;
+  }
+
+  #contactForm {
+    padding: 5px;
+  }
+
 }
 
 
