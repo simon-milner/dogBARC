@@ -21,12 +21,15 @@ body{
 
 h1 { font-family: Lato; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 40px; padding: 0px; margin-top: 20px;} 
 h2 { font-family: Lato; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 32px; padding: 10px 0px;} 
-h3 { font-family: Lato; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 22px; padding: 10px 0px; margin-bottom: 2rem;} 
+h3 { font-family: Lato; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 22px; padding: 10px 10px 10px 20px; margin-bottom: 1rem;} 
 h4 { font-family: Lato; font-size: 28px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding: 30px 10px 0px 5px;} 
 p { font-family: Lato; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 24px; padding: 10px 10px 10px 20px; margin-bottom: 0px;} 
 .p-body { font-size: 16px; font-weight: 400; line-height: 34px; color: #667080; margin-top: 8px;}
 .p-header {font-size: 14px; font-weight: 500; line-height: 17px; color: #191B1D; margin-bottom: 0px;}
 .black {color: black;}
+.heavy-weight {font-weight: 700; padding: 50px 0 0 0; margin-top: 50px;}
+.accordion-panel__content .margin-bottom {margin-bottom: 20px;}
+
 a { font-family: Lato; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
 blockquote { font-family: Lato; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
 pre { font-family: Lato; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15px; }
@@ -523,6 +526,22 @@ footer {
   padding: 2rem;
 }
 
+/* Blog Page */
+.hero-image {grid-area: hero-image;}
+.hero-image-lable {grid-area: hero-image-lable;}
+.blog-body {grid-area: blog-body;}
+
+.blog-container{
+  display: grid;
+  grid-template-areas:  
+    'hero-image hero-image-lable'
+    'blog-body blog-body';
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 0 auto;    
+  margin-bottom: 30px;                 
+}
+
 @media(max-width: 700px) {
   body {
     padding: 0;
@@ -571,6 +590,18 @@ footer {
       'icons-container1' 
       'icons-container2';
     grid-template-columns: 1fr;
+  }
+
+  /* Blog Page */
+
+  .blog-container{
+    display: grid;
+    grid-template-areas:  
+      'hero-image'
+      'hero-image-lable'
+      'blog-body';
+    grid-template-columns: 1fr;
+             
   }
 
 }
