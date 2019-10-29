@@ -16,16 +16,23 @@ body{
   padding: 20px 20px 40px 20px;
   color: #333;
   background:#fff;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 h1 { font-family: Lato; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 40px; padding: 0px; margin-top: 20px;} 
 h2 { font-family: Lato; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 32px; padding: 10px 0px;} 
 h3 { font-family: Lato; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 22px; padding: 10px 0px; margin-bottom: 2rem;} 
-h4 { font-family: Lato; font-size: 28px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding: 30px 10px 0px 20px;} 
-p { font-family: Lato; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 26px; padding: 10px 10px 10px 20px; margin-bottom: 10px;} 
+h4 { font-family: Lato; font-size: 28px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding: 30px 10px 0px 5px;} 
+p { font-family: Lato; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 24px; padding: 10px 10px 10px 20px; margin-bottom: 0px;} 
+.p-body { font-size: 16px; font-weight: 400; line-height: 34px; color: #667080; margin-top: 8px;}
+.p-header {font-size: 14px; font-weight: 500; line-height: 17px; color: #191B1D; margin-bottom: 0px;}
+.black {color: black;}
 a { font-family: Lato; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
-blockquote { font-family: Lato; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Lato; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+blockquote { font-family: Lato; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
+pre { font-family: Lato; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15px; }
+input { font-family: Lato; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 15px; padding: 5px; margin-bottom: 5px; width: 100%;} 
+textarea { font-family: Lato; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 15px; padding: 5px; margin-bottom: 5px; } 
+
 
 table { width:100%;}
 td { border:1px solid #ccc;}
@@ -54,12 +61,20 @@ h4{margin: 0 0 10px;}
   transform: translate(-50%, -50%);
 }
 
+.form-control {
+  width: 100%;
+}
+
 .col-sm-6 {
   padding: 0 20px;
 }
 
 .col-sm-12 {
   padding: 0 20px;
+}
+
+#contactForm p {
+  padding: 20px 10px 10px 5px;
 }
 
 #contactForm .box {
@@ -191,7 +206,6 @@ h4{margin: 0 0 10px;}
 
 .accordion-panel__content p {
   padding: 0;
-  margin-top: 0;
   margin-bottom: 5px;
 }
 
@@ -222,7 +236,7 @@ a {
 
 
 .main-header {
-  height: 55vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -451,6 +465,55 @@ card img {
   display: block;
 }
 
+.message-us {grid-area: message-us;}
+.our-address {grid-area: our-address;}
+.follow-us {grid-area: follow-us;}
+
+.grid-container{
+  display: grid;
+  grid-template-areas:  
+    'message-us our-address'
+    'message-us follow-us';
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;    
+  margin-bottom: 30px;                 
+}
+
+.grid-container > div{
+  background: #3bbced;
+  padding: 30px;
+}
+
+.grid-container > div:nth-child(even){
+  background: #777;
+}
+
+.name {grid-area: name;}
+.email-address {grid-area: email-address;}
+.message {grid-area: message;}
+
+.submit-form-container{
+  display: grid;
+  grid-template-areas:
+    'name email-address'
+    'message message';
+    grid-template-columns: 1fr 1fr;
+}
+
+.follow-us h3 {grid-area: header;}
+.icons-container1 {grid-area: icons-container1;}
+.icons-container2 {grid-area: icons-container2;}
+
+.follow-us{
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'icons-container1 icons-container2';
+  grid-template-columns: 1fr 1fr;
+}
+
 
 footer {
   font-size: 1rem;
@@ -472,7 +535,7 @@ footer {
     display: block;
   }
   .main-header {
-    height: 40vh;
+    height: auto;
   }
 
   .FAQ-container {
@@ -481,6 +544,33 @@ footer {
 
   #contactForm {
     padding: 5px;
+  }
+
+  .grid-container{
+    display: grid;
+    grid-template-areas:  
+      'message-us'
+      'our-address'
+      'follow-us';
+      grid-template-columns: 1fr;
+  }
+
+  .submit-form-container{
+    display: grid;
+    grid-template-areas:
+      'name'
+      'email'
+      'message';
+      grid-template-columns: 1fr;
+  }
+
+  .follow-us{
+    display: grid;
+    grid-template-areas:
+      'header'
+      'icons-container1' 
+      'icons-container2';
+    grid-template-columns: 1fr;
   }
 
 }
