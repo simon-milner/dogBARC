@@ -28,9 +28,10 @@ p { font-family: Lato; font-size: 18px; font-style: normal; font-variant: normal
 .p-header {font-size: 14px; font-weight: 500; line-height: 17px; color: #191B1D; margin-bottom: 0px;}
 .black {color: black;}
 .heavy-weight {font-weight: 700; padding: 50px 0 0 0; margin-top: 50px;}
+.pad-left {padding: 0 0 0 20px;}
 .accordion-panel__content .margin-bottom {margin-bottom: 20px;}
 
-a { font-family: Lato; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+a { font-family: Lato; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;} 
 blockquote { font-family: Lato; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
 pre { font-family: Lato; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15px; }
 input { font-family: Lato; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 15px; padding: 5px; margin-bottom: 5px; width: 100%;} 
@@ -370,8 +371,11 @@ card img {
   background: #b50d10;
   color: #fff;
   padding: 0.4rem 1rem;
-  margin-top: 0rem;
   cursor: pointer;
+}
+
+.blog-body .p-body .margin-top {
+  margin-top: 2 rem;
 }
 
 .btn:hover {
