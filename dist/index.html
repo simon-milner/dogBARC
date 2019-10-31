@@ -11,196 +11,208 @@
     <title>dog Bay Area Research Center</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 </head>
+<!---------------------------->
+<!--        BODY            -->
+<!---------------------------->
 <body>
     <script>AOS.init();</script>
-    <header class="main-header">
-        <h1><span><i>dog&hairsp;</i></span>&hairsp;BARC</h1>
-        <h2>World's foremost dog science and technology center </br></h2>
-        <h3>Mental health solution for you and your dog</h3>
-    </header>
+    <div id="landing-page-container"> <!-- Three elements: header-main-footer -->
+        <header id="landing-page-navbar">
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active"> <i class="fa fa-home fa-w-18 fa-lg"></i> Home</a>
+                <a href="#technology"><i class="fa fa-microchip fa-w-16 fa-lg"></i> Technology</a>
+                <a href="#who-we-are"> <i class="fa fa-users fa-w-20 fa-lg"></i> Who we are</a>
+                <a href="#blog"> <i class="fa fa-blog fa-w-20 fa-lg"></i> Blog</a>
+                <a href="#more">More <i class="fa fa-chevron-down fa-w-14"></i></a>
+                <a href="javascript:void(0);" class="icon" onclick="NavBarFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
+                </div>
+            </header> 
+        <main id="main-grid-container"> 
 
-    <main class="scroll-container">
-        <section class="card">
-            <img src="img/dog_1.png" alt="">
-            <div class="txt-vertical-center">
-                <p><span><i>No more</i></span>&hairsp; Anxiety Medication <br><br>
-                All-natural solution for young and old dogs &mdash; for life. <br><br>
-                <span><i>Vet</i></span>&hairsp; Recommended&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="#" class="btn"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;Read more</a></span></p>
+            <header class="main-header">
+                <h1><span><i>dog&hairsp;</i></span>&hairsp;BARC</h1>
+                <h2>World's foremost dog science and technology center </br></h2>
+                <h3>Mental health solution for you and your dog</h3>
+            </header>
+    
+            <section class="scroll-container">
+                <section class="card">
+                    <img src="img/dog_1.png" alt="">
+                    <div class="txt-vertical-center">
+                        <p><span><i>No more</i></span>&hairsp; Anxiety Medication <br><br>
+                        All-natural solution for young and old dogs &mdash; for life. <br><br>
+                        <span><i>Vet</i></span>&hairsp; Recommended&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="#" class="btn"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;Read more</a></span></p>
+                    </div>
+                </section>
+                <section class="card" data-aos="fade-left">
+                    <img src="img/dog_2.png" alt="">
+                    <div class="txt-vertical-center">
+                        <p><span><i>No more</i></span>&hairsp; Unwanted Behavior<br><br>
+                        Scientifically proven routines to engage and calm your dog.<br> <br> <span>
+                        <a href="#" class="btn">Email subscribe</a></span></p>
+                    </div>      
+                </section>
+                <section class="card" data-aos="fade-right">
+                    <img src="img/dog_3.png" alt="">
+                    <div class="txt-vertical-center">
+                        <p><span><i>No more</i></span>&hairsp; Worry <br><br>
+                        A lifetime of peace of mind... And fun times together!<br><br> <span>
+                        <a href="page2.html" class="btn">Dr. Dunbar Blog&nbsp&nbsp;<i class="fas fa-chevron-right"></i></a></span></p>
+                    </div>        
+                </section>
+            </section>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init({offset: 200, duration: 800});
+            </script>
+        
+        
+        <!-- FAQ -->
+        <!-- content starts here -->
+        <div class="FAQ-container">
+            <h2>Frequently Asked Questions</h2>
+        <section class="accordion" role="tablist" aria-multiselectable="false">
+        <a class="accordion-panel__heading" href="javascript:;">Q1. Why <span><i>dog&hairsp;&hairsp;</i></span>BARC?</a>
+        <div class="accordion-panel__content">
+            <p class="p-header">ANSWER 1:</p>
+            <p class="p-body">Because all dogs can be trained - young and old. Computerized training produces the best long-term results - for dog and owner. Calming, mental stimulation for your dog. Anti-anxiety medication-free for Life! </p>
+        </div>
+        
+        <a class="accordion-panel__heading" href="javascript:;">Q2. What is the <span><i>dog&hairsp;&hairsp;</i></span>BARC method?</a>
+        <div class="accordion-panel__content">
+            <p class="p-header">ANSWER 2:</p>
+            <p class="p-body">Firmly in the camp of positive reinforcement training, <span><i>dog</i></span>&hairsp;&hairsp;<span class="black">BARC</span> is rooted in science. We have more than 50 years of scientific practice in our founding team. <span><i>dog</i></span>&hairsp;&hairsp;<span class="black">BARC</span> technology reliably stimulates and calms your dog - providing a lifetime feeding and training buddy for when your dog should be resting happy in the family home.</p>
+        </div>
+        
+        <a class="accordion-panel__heading" href="javascript:;">Q3. Will technology affect my relationship with my dog?</a>
+        <div class="accordion-panel__content">
+            <p class="p-header">ANSWER 3:</p>
+            <p class="p-body">Yes, if you try to simply replace quality one-on-one time with any one of the various PetTech products on the market. However... <br><hr width="25%" class="margin-bottom"></p>
+            <p class="p-body"><span class="black heavy-weight">NO</span>, not if you introduce <span><i>dog</i></span>&hairsp;&hairsp;<span class="black">BARC</span> technology to fix critical destructive behaviors within the family home. By removing worrysome and frustrating behaviors, <span><i>dog</i></span>&hairsp;&hairsp;<span class="black">BARC</span> frees you up to fully enjoy and interact with your dog.</p>
+        
+        </div>
+        
+        </section>
+        </div>
+        
+        <!--AJAX - no JQuery Libraries-->
+        <p>
+            <br>
+        </p>
+        
+        <div class="grid-container">
+            <div class="message-us">
+                <div>
+                    <h3>Contact Form</h3>
+                    <p>We'll let you know when we're ready ...............</p>
+                </div>
+                <div class="submit-form-container">
+                    <div class="name">
+                        <input type="name" placeholder="Name"> 
+                    </div>
+                    <div class="email">
+                        <input type="email-address" placeholder="Email Address">
+                    </div>  
+                    <div class="message">
+                        <input type="message" placeholder="Message">
+                    </div>   
+                </div>
+                <a href="button" class="btn">Send email</a>
             </div>
-        </section>
-        <section class="card" data-aos="fade-left">
-            <img src="img/dog_2.png" alt="">
-            <div class="txt-vertical-center">
-                <p><span><i>No more</i></span>&hairsp; Unwanted Behavior<br><br>
-                Scientifically proven routines to engage and calm your dog.<br> <br> <span>
-                <a href="#" class="btn">Email subscribe</a></span></p>
-            </div>      
-        </section>
-        <section class="card" data-aos="fade-right">
-            <img src="img/dog_3.png" alt="">
-            <div class="txt-vertical-center">
-                <p><span><i>No more</i></span>&hairsp; Worry <br><br>
-                A lifetime of peace of mind... And fun times together!<br><br> <span>
-                <a href="page2.html" class="btn">Dr. Dunbar Blog&nbsp&nbsp;<i class="fas fa-chevron-right"></i></a></span></p>
-            </div>        
-        </section>
-    </main>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({offset: 200, duration: 800});
-    </script>
-
-
-<!-- FAQ -->
- <!-- content starts here -->
- <div class="FAQ-container">
-    <h2>Frequently Asked Questions</h2>
- <section class="accordion" role="tablist" aria-multiselectable="false">
-  <a class="accordion-panel__heading" href="javascript:;">Q1. Why <span><i>dog&hairsp;&hairsp;</i></span>BARC?</a>
-  <div class="accordion-panel__content">
-      <p class="p-header">ANSWER 1:</p>
-      <p class="p-body">Because all dogs can be trained - young and old. Computerized training produces the best long-term results - for dog and owner. Calming, mental stimulation for your dog. Anti-anxiety medication-free for Life! </p>
-  </div>
-
-  <a class="accordion-panel__heading" href="javascript:;">Q2. What is the <span><i>dog&hairsp;&hairsp;</i></span>BARC method?</a>
-  <div class="accordion-panel__content">
-      <p class="p-header">ANSWER 2:</p>
-      <p class="p-body">Firmly in the camp of positive reinforcement training, <span><i>dog</i></span>&hairsp;&hairsp;<span class="black">BARC</span> is rooted in science. We have more than 50 years of scientific practice in our founding team. <span><i>dog</i></span>&hairsp;&hairsp;<span class="black">BARC</span> technology reliably stimulates and calms your dog - providing a lifetime feeding and training buddy for when your dog should be resting happy in the family home.</p>
-  </div>
-
-  <a class="accordion-panel__heading" href="javascript:;">Q3. Will technology affect my relationship with my dog?</a>
-  <div class="accordion-panel__content">
-    <p class="p-header">ANSWER 3:</p>
-    <p class="p-body">Yes, if you try to simply replace quality one-on-one time with any one of the various PetTech products on the market. However... <br><hr width="25%" class="margin-bottom"></p>
-    <p class="p-body"><span class="black heavy-weight">NO</span>, not if you introduce <span><i>dog</i></span>&hairsp;&hairsp;<span class="black">BARC</span> technology to fix critical destructive behaviors within the family home. By removing worrysome and frustrating behaviors, <span><i>dog</i></span>&hairsp;&hairsp;<span class="black">BARC</span> frees you up to fully enjoy and interact with your dog.</p>
-
-  </div>
-
-</section>
-</div>
-
-<!--AJAX - no JQuery Libraries-->
-<p>
-    <br>
-</p>
-
-<div class="grid-container">
-    <div class="message-us">
-        <div>
-            <h3>Contact Form</h3>
-            <p>We'll let you know when we're ready ...............</p>
-        </div>
-        <div class="submit-form-container">
-            <div class="name">
-                <input type="name" placeholder="Name"> 
+            <div class="our-address">
+                <h3>Our address</h3>
+                <p>xyz, CA</p>
             </div>
-            <div class="email">
-                <input type="email-address" placeholder="Email Address">
-            </div>  
-            <div class="message">
-                <input type="message" placeholder="Message">
-            </div>   
+            <div class="follow-us">
+                <h3>Follow us</h3>
+                <div class="icons-container1">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </div>
+                <div class="icons-container2">
+                    <li>Four</li>
+                    <li>Five</li>
+                    <li>Six</li>
+                </div>
+            </div>
         </div>
-        <a href="button" class="btn">Send email</a>
-    </div>
-    <div class="our-address">
-        <h3>Our address</h3>
-        <p>xyz, CA</p>
-    </div>
-    <div class="follow-us">
-        <h3>Follow us</h3>
-        <div class="icons-container1">
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-        </div>
-        <div class="icons-container2">
-            <li>Four</li>
-            <li>Five</li>
-            <li>Six</li>
-        </div>
-    </div>
-</div>
-
-<section id="contactForm">
-    <div class="container">
-        <div class="box last">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="border">
-                    <h4>Contact Form</h4>
-                    <p>We'll let you know when dogBARC products and services are available.</p>
-                    <div class="status alert alert-success" style="display: none"></div>
-                    <!--<form id="contactForm">-->
-                        <div class="row">
-                            <div class="col-sm-6">
-                                    <!--<label style="display:none">Name</label>-->
-                                    <input type="text" class="form-control" required name="name" placeholder="Name">
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <!--<label style="display:none">Email Address</label>-->
-                                    <input type="text" class="form-control" required name="email" placeholder="Email Address"> 
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <label style="display:none">Message</label>
-                                <textarea id="message" class="form-control" name="message" required name="content" rows="8" placeholder="Message"></textarea>
-                                <div id="toast"></div>
-                                <a href="#" class="btn">Send email</a>
-                            </div>
-                        </div>
-                    <!--</form>-->
-                </div><!--border-->
-                </div><!--/.col-sm-6-->
-                <div class="col-sm-6">
-                    <div class="border">
-                    <h4>Our Address</h4>
+        
+        <section id="contactForm">
+            <div class="container">
+                <div class="box last">
                     <div class="row">
-                        <div class="col-md-6">
-                            <p>
-                                1098 Shattuck Ave.,<br>
-                                Berkeley, CA 93404<br>
-                                <i class="fa fa-phone" style="font-size:17px;color:white;"></i>
-                                (415) 300-2990
-                            </p>
-                        </div>
-                    </div>
-                    <h4>Connect with us</h4>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="social">
-                                <li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>
-                                <li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
-                                <li><a href="#"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="social">
-                                <li><a href="#"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
-                                <li><a href="#"><i class="icon-twitter icon-social"></i> Twitter</a></li>
-                                <li><a href="#"><i class="icon-youtube icon-social"></i> Youtube</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                </div><!--/.col-sm-6-->
-            </div><!--/.row-->
-        </div><!--/.box-->
-    </div><!--/.container-->
-</section><!--/#contact-->
+                        <div class="col-sm-6">
+                            <div class="border">
+                            <h4>Contact Form</h4>
+                            <p>We'll let you know when dogBARC products and services are available.</p>
+                            <div class="status alert alert-success" style="display: none"></div>
+                            <!--<form id="contactForm">-->
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                            <!--<label style="display:none">Name</label>-->
+                                            <input type="text" class="form-control" required name="name" placeholder="Name">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <!--<label style="display:none">Email Address</label>-->
+                                            <input type="text" class="form-control" required name="email" placeholder="Email Address"> 
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label style="display:none">Message</label>
+                                        <textarea id="message" class="form-control" name="message" required name="content" rows="8" placeholder="Message"></textarea>
+                                        <div id="toast"></div>
+                                        <a href="#" class="btn">Send email</a>
+                                    </div>
+                                </div>
+                            <!--</form>-->
+                        </div><!--border-->
+                        </div><!--/.col-sm-6-->
+                        <div class="col-sm-6">
+                            <div class="border">
+                            <h4>Our Address</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        1098 Shattuck Ave.,<br>
+                                        Berkeley, CA 93404<br>
+                                        <i class="fa fa-phone" style="font-size:17px;color:white;"></i>
+                                        (415) 300-2990
+                                    </p>
+                                </div>
+                            </div>
+                            <h4>Connect with us</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>
+                                        <li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
+                                        <li><a href="#"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
+                                        <li><a href="#"><i class="icon-twitter icon-social"></i> Twitter</a></li>
+                                        <li><a href="#"><i class="icon-youtube icon-social"></i> Youtube</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            </div>
+                        </div><!--/.col-sm-6-->
+                    </div><!--/.row-->
+                </div><!--/.box-->
+            </div><!--/.container-->
+        </section><!--/#contact-->
+        </main>
+        <footer id="landing-page-footer" >Copyright dog Bay Area Research Center 2019</footer> <!--footer-section-->
+    </div> <!--landing-page-container-->
 
-
-
-<footer>
-    <p>Copyright dog Bay Area Research Center 2019</p>
-</footer>
-</html>
-
-
-
- <script src="js/main.js"></script>
-
+<script src="js/main.js"></script>
 </body>
+</html>

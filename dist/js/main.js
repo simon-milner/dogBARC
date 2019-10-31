@@ -1,6 +1,15 @@
+function NavBarFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+
 const tabItems = document.querySelectorAll('.tab-item')
 const tabContentItems = document.querySelectorAll('.tab-content-item');
-
 
 var myAPP = myAPP || {};
 
